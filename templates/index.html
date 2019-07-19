@@ -1,0 +1,30 @@
+<html>
+<body>
+ <meta http-equiv="refresh" content="60">
+<style>
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+    background: {{color}};
+    color: white;
+}
+</style>
+  <div class="circle">
+{{counter}}
+</div>
+
+<font color="black" size="3">
+
+{% for event in events %}
+    <li>{{ event }}</li>
+{% endfor %}
+
+</font>
+
+
+</body>
+</html>
