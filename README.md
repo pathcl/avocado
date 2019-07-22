@@ -1,7 +1,7 @@
-## grid for vsphere it will show you all the alarms!
+# Grid for vsphere
 
-# to run it locally you need to do:
-
-$ docker run -e 'VSPHERE_VCENTER=yourvcenter.domain.tld' -e 'VSPHERE_USERNAME=username' -e 'VSPHERE_PASSWORD=VSPHERE_PASSWORD' -p 8000:8000 pathcl/grid:0.0.1
-
+## Run it:
+```
+docker run -p 8000:8000 -e 'VSPHERE_VCENTER=vcenter.domain.tld' -e 'VSPHERE_USER=username' -e 'VSPHERE_PASSWORD=password' pathcl/grid:0.0.11
+```
 Then you'll have it available on http://127.0.0.1:8000
