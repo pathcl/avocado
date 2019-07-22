@@ -8,9 +8,13 @@ RUN pip install --install-option="--prefix=/install" -r /requirements.txt
 
 FROM base
 COPY --from=builder /install /usr/local
-ENV VSPHERE_VCENTER vcenter.domain.tld
-ENV VSPHERE_USER username
-ENV VSPHERE_PASSWORD password
+ARG VSPHERE_VCENTER
+ARG VSPHERE_USER
+ARG VSPHERE_PASSWORD
+
+ENV VSPHERE_VCENTER=$VSPHERE_VCENTER
+ENV VSPHERE_USER=$VSPHERE_USER
+ENV VSPHERE_PASSWORD=$VSPHERE_PASSWORD
 COPY . /app
 COPY templates /app
 WORKDIR /app
